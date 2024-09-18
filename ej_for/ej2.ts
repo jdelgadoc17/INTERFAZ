@@ -8,7 +8,7 @@ Ejemplo para n = 4:
 ****
 **** */
 
-function triangulo2(num: number): void {
+function triangulo2(num:number):void {
     for (let i = 0; i < num; i++) {
         let fila = '';
         for (let j = 0; j < num; j++) {
