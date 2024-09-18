@@ -8,6 +8,14 @@ Ejemplo para n = 4:
 ****
 **** */
 
+import * as readline from 'readline';
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+
 function triangulo2(num:number):void {
     for (let i = 0; i < num; i++) {
         let fila = '';
@@ -18,4 +26,14 @@ function triangulo2(num:number):void {
     }
 }
 
-triangulo2(6)
+rl.question('Dime el número de asteriscos: ', (input: string) => {
+    let num = parseInt(input); 
+    triangulo2(num);
+
+    rl.close(); 
+});
+
+
+
+
+

@@ -1,3 +1,4 @@
+"use strict";
 /**3. Pirámide de Asteriscos
 Dibuja una pirámide de n filas. La primera fila tiene un asterisco centrado, y cada fila subsiguiente tiene dos asteriscos más, formando una pirámide.
 
@@ -8,6 +9,7 @@ Ejemplo para n = 5:
   *****
  *******
 ********* */
+Object.defineProperty(exports, "__esModule", { value: true });
 function triangulo3(num) {
     for (var i = 0; i < num; i++) {
         var fila = '';
@@ -20,4 +22,13 @@ function triangulo3(num) {
         console.log(fila);
     }
 }
-triangulo3(5);
+var readline = require("readline");
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+rl.question('Dime el número de asteriscos: ', function (input) {
+    var num = parseInt(input);
+    triangulo3(num);
+    rl.close();
+});

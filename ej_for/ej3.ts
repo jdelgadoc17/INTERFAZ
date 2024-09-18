@@ -12,12 +12,9 @@ Ejemplo para n = 5:
 function triangulo3(num:number):void {
     for (let i = 0; i < num; i++) {
         let fila = '';
-
         for (let j = 0; j < num - i - 1; j++) {
             fila += ' '; 
         }
-
-        
         for (let j = 0; j < (2 * i + 1); j++) {
             fila += '*'; 
         }
@@ -26,4 +23,20 @@ function triangulo3(num:number):void {
     }
 }
 
-triangulo3(5);
+
+
+
+import * as readline from 'readline';
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+
+rl.question('Dime el número de filas: ', (input: string) => {
+    let num = parseInt(input); 
+    triangulo3(num);
+
+    rl.close(); 
+});
